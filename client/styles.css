@@ -15,3 +15,7 @@ h1 {
     
 }
 
+body {
+    background-image: url(./images/alien-face.jpeg) 50px;
+    background-repeat: repeat;
+}
