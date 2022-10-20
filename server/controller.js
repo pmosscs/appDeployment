@@ -20,7 +20,6 @@ module.exports = {
     },
 
     getAlienPic: (req, res) => {
-        rollbar.log('someone clicked this image')
         res.status(200).send(veryRealAlien)
     }
 }
