@@ -2,7 +2,6 @@ const path = require('path')
 const Rollbar = require('rollbar')
 
 
-let veryRealAlien = "./images/veryReal.png"
 
 
 module.exports = {
@@ -22,6 +21,6 @@ module.exports = {
     },
 
     getAlienPic: (req, res) => {
-        res.status(200).send(veryRealAlien)
+       
     }
 }

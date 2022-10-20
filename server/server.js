@@ -16,12 +16,18 @@ let rollbar = new Rollbar({
 
 rollbar.log('Hello world!')
 
+let veryRealAlien = "./images/veryReal.png"
+
+
 const { getHTML, getCSS, getJS, getAlienPic } = require('./controller')
 
 app.get('/', getHTML)
 app.get('/css', getCSS)
 app.get('/js', getJS)
-app.get('/pic', getAlienPic) 
+app.get('/pic', (req, res) => {
+    rollbar.log('someone clicked crap')
+    res.status(200).send(veryRealAlien)
+}) 
  
 
 const port = process.env.PORT || 4000
