@@ -16,11 +16,12 @@ let rollbar = new Rollbar({
 
 rollbar.log('Hello world!')
 
-const { getHTML, getCSS, getJS } = require('./controller')
+const { getHTML, getCSS, getJS, getAlienPic } = require('./controller')
 
 app.get('/', getHTML)
 app.get('/css', getCSS)
 app.get('/js', getJS)
+app.get('/pic', getAlienPic)
  
 
 const port = process.env.PORT || 4000

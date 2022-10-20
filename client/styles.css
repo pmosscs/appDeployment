@@ -24,3 +24,7 @@ body {
 li {
     color: white;
 }
+
+.aliencss {
+    visibility: hidden;
+}
