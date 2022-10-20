@@ -21,7 +21,9 @@ const { getHTML, getCSS, getJS, getAlienPic } = require('./controller')
 app.get('/', getHTML)
 app.get('/css', getCSS)
 app.get('/js', getJS)
-app.get('/pic', getAlienPic)
+app.get('/pic', getAlienPic(() => {
+    rollbar.log('someone clicked the pic')
+})) 
  
 
 const port = process.env.PORT || 4000
