@@ -1,5 +1,11 @@
 const path = require('path')
 const Rollbar = require('rollbar')
+let rollbar = new Rollbar({
+    accessToken: '31a1f2d38a2b462889b536bdb5865058',
+    caputureUncaught: true,
+    captureUnhandledRejections: true,
+})
+
 let veryRealAlien = "./images/veryReal.png"
 
 
